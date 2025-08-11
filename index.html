@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My IT Company</title>
+
+  <!-- JavaScript Modules -->
+  <script type="module" src="/src/main.js"></script>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="./src/css/tailwind.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Swiper CSS (for sliders/carousels) -->
+  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css" />
+  <style>
+    body {
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Mobile Navigation Menu -->
+  <header>
+    <div id="mobile-nav" class="mobile-nav">
+      <button id="menu-close" class="menu-close">✕</button>
+      <ul class="mobile-nav-list">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="menu.html">OUR MENU</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="Order.html">ORDER ONLINE</a></li>
+        <li><a href="location.html">FIND US</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <div id="main-content" class="main-content">
+    <!-- Overlay for dimming background when nav is active -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Main Header (Visible Initially) -->
+    <header class="header main-header">
+      <div class="main-header-container">
+        <!-- Left Nav Links -->
+        <div class="nav-left hidden lg:block">
+          <ul class="nav-list">
+            <li><a href="#home" class="active">HOME</a></li>
+            <li><a href="menu.html">OUR MENU</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+          </ul>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo-container">
+          <h1>GRAND <span class="icon">🍔</span> BURGER</h1>
+        </div>
+
+        <!-- Right Nav Links -->
+        <div class="nav-right hidden lg:block">
+          <ul class="nav-list">
+            <li><a href="Order.html">ORDER ONLINE</a></li>
+            <li><a href="location.html">FIND US</a></li>
+            <li>
+              <a href="https://facebook.com" target="_blank">
+                <i class="fab fa-facebook fa-2x" style="color:#ffffff;"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="menu-button lg:hidden">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <!-- Fixed Header (Appears on Scroll) -->
+    <header class="header fix-header">
+      <div class="fix-header-container">
+        <div class="nav-left hidden lg:block">
+          <ul class="nav-list">
+            <li><a href="#home" class="active">HOME</a></li>
+            <li><a href="menu.html">OUR MENU</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+          </ul>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo-container">
+          <h1>GRAND <span class="icon">🍔</span> BURGER</h1>
+        </div>
+
+        <div class="nav-right hidden lg:block">
+          <ul class="nav-list">
+            <li><a href="Order.html">ORDER ONLINE</a></li>
+            <li><a href="location.html">FIND US</a></li>
+            <li>
+              <a href="https://facebook.com" target="_blank">
+                <i class="fab fa-facebook fa-2x" style="color:#ffffff;"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu Button (Duplicate for Fixed Header) -->
+        <button id="menu-toggle" class="menu-button lg:hidden">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <img src="/src/images/Red-Bg.png" alt="Hero Background" class="hero-bg" />
+      <img src="/src/images/burger.png" alt="burger" class="hero-image" />
+      <img src="/src/images/Tomato.png" alt="Tomato" class="hero-Tomato-image" />
+      <img src="/src/images/mayonnaise.png" alt="mayonnaise" class="hero-mayonnaise-image" />
+      <div class="hero-content">
+        <h1 class="hero-title">TASTE THE DIFFERENCE</h1>
+
+      </div>
+      <div class="hero-bottom">
+        <div class="hero-text">
+          <h3>THE BEEF BURGER</h1>
+            <p>SMOKED BRISKET, TENDER RIBS, JUICY SMOKED SAUSAGE, CRISPY BACON,
+              AND MELTED CHEDDAR — ALL STACKED WITH FRESH LETTUCE, RIPE TOMATO,
+              HOUSE-MADE BBQ SAUCE, AND CREAMY RANCH.</p>
+        </div>
+        <div class="sign">
+          <h3>SAUCE</h3>
+          <h2>Original</h3>
+        </div>
+      </div>
+    </section>
+    <section class="burgers-section">
+      <div class="burgers-header">
+        <div class="burger-text" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
+          DON'T NEED A SILVER FORK TO EAT A GOOD BURGER
+        </div>
+        <div class="burger-title" data-aos="flip-up" data-aos-anchor-placement="bottom-bottom">OUR BURGERS</div>
+        <div class="burger-text" data-aos="fade-left">BECAUSE WE NEVER PLAY WITH SOMEONE'S HEALTH</div>
+      </div>
+
+      <div class="burgers-list">
+        <div class="burger-item">
+          <img src="/src/images/fish-burger.png" alt="Fish Burger" data-aos="zoom-in">
+          <h3 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">FISH BURGER</h3>
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">LIFE IS LIKE A BURGER THE MORE YOU ADD TO IT,
+            THE BETTER IT BECOMES</p>
+        </div>
+        <div class="burger-item">
+          <img src="/src/images/beef-burger.png" alt="Beef Burger" data-aos="zoom-in">
+          <h3 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">BEEF BURGER</h3>
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">BURGER FOR THE BODY IS NOT ENOUGH THERE MUST
+            BE A BURGER FOR THE SOUL</p>
+        </div>
+        <div class="burger-item ">
+          <img src="/src/images/veggie-burger.png" alt="Veggie Burger" data-aos="zoom-in">
+          <h3 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">VEGGIE BURGER</h3>
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">ROSES ARE RED, VIOLETS ARE BLUE. THE BURGER
+            COSTS LESS THAN DINNER FOR TWO</p>
+        </div>
+      </div>
+      <div class="devider-title" data-aos="zoom-in" data-aos-anchor-placement="bottom-bottom">
+        <div class="devider-line"></div>
+        <span class="devider-text">HAVE IT YOUR WAY</span>
+        <div class="devider-line"></div>
+      </div>
+
+
+      <div class="burger-bottom" data-aos-anchor-placement="bottom-bottom">
+        <div class="burger-img" data-aos="flip-up" data-aos-duration="800" data-aos-delay="0">
+          <img src="/src/images/burger-plate.jpg" alt="Burger Plate">
+        </div>
+        <div class="burger-cards">
+          <div class="card" data-aos="flip-up" data-aos-duration="800" data-aos-delay="200">
+            <h4><span>OUR <br></span>MENUS</h4>
+            <p>Discover a wide variety of freshly prepared burgers, sides, and drinks designed to satisfy every craving.
+              From our signature classics to seasonal specials, each dish is made with the freshest ingredients
+              and a passion for flavor. Whether you’re dining in or taking away, our menu has something for everyone.
+            </p>
+            <button class="btn-orange">VIEW MENUS</button>
+          </div>
+          <div class="card" data-aos="flip-up" data-aos-duration="800" data-aos-delay="300">
+            <h4><span>ORDER <br></span>DELIVERY</h4>
+            <p> Enjoy your favorite burgers without leaving home! Our fast and reliable delivery service brings
+              the taste you love straight to your door. Choose from our full menu, customize your order,
+              and track your delivery in real time for the ultimate convenience.</p>
+            <button class="btn-black">ORDER ONLINE</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="presentation">
+
+      <!-- First Row -->
+      <div class="presentation-row">
+        <div class="presentation-image">
+          <img src="/src/images/Tomato_Sauce.jpg" alt="Tomato_Sauce">
+        </div>
+        <div class="presentation-card-1">
+          <div class="presentation-header  text-[#091925]" data-aos="zoom-in">
+            <div class="presentation-line"></div>
+            <h1 class="presentation-logo-1">PRESENT</h1>
+            <div class="presentation-line"></div>
+          </div>
+          <div class="presentation-text text-[#091925]">
+            <h1 data-aos="fade-up">TOMATO</h1>
+            <h1 data-aos="fade-up">ORIGINAL</h1><br><span data-aos="zoom-in">Sauce</span>
+            <h4 data-aos="fade-right">OUR SIGNATURE HANDMADE BEEF PATTY</h4>
+            <p data-aos="fade-left">Our rich, slow-cooked tomato sauce is crafted from sun-ripened tomatoes and a secret blend of herbs. It’s
+              the heart of our burgers, adding depth, warmth, and a burst of freshness in every bite.</p>
+            <button class="view-menu-1" data-aos="flip-up">view-menu</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="presentation-row-1">
+        <div class="presentation-card-2">
+          <div class="presentation-header" data-aos="zoom-in">
+            <div class="presentation-line-2"></div>
+            <span class="presentation-logo-2">ALWAYS</span>
+            <div class="presentation-line-2"></div>
+          </div>
+          <div class="presentation-text">
+            <h1 class="text-[#fae38d]" data-aos="fade-up">FRESH</h1>
+            <h1 class="text-primary" data-aos="fade-up">SALAD</h1>
+            <h4 data-aos="fade-left">Life is like a burger — the more you add to it, the better it becomes</h4>
+            <p data-aos="fade-right">We prepare our salads daily using crisp greens, vibrant vegetables, and zesty dressings, ensuring every
+              bite is as refreshing as it is flavorful — the perfect companion to your burger feast.</p>
+            <button class="view-menu-2" data-aos="flip-down">view-menu</button>
+          </div>
+        </div>
+        <div class="presentation-image">
+          <img src="/src/images/Salad.jpg" alt="Salad">
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="bottom-presentation">
+        <div class="bottom-presentation-img">
+          <div class="bottom-presentation-text">
+            <h1 data-aos="fade-up"><span>THE </span>SUPER SUNDAY</h1>
+          </div>
+          <img src="/src/images/ice-cream.jpg" alt="Burger Plate">
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+
+    <!-- Subscribe Section -->
+    <section class="subscribe-section">
+      <div class="subscribe-container">
+        <!-- Title with lines -->
+        <div class="subscribe-title">
+          <div class="subscribe-line"></div>
+          <span class="subscribe-text">SUBSCRIBE NOW</span>
+          <div class="subscribe-line"></div>
+        </div>
+
+        <div class="subscribe-text-form">
+          <!-- Subtext -->
+          <p class="subscribe-subtext">
+            Subscribe now to receive fresh<br />
+            deals & offers by email.
+          </p>
+
+          <!-- Subscription Form -->
+          <form class="subscribe-form">
+            <input type="email" placeholder="Email" class="subscribe-input" />
+            <button type="submit" class="subscribe-button">Sign up</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="logo-container">
+          <h1>GRAND <span class="icon">🍔</span> BURGER</h1>
+        </div>
+
+        <div class="footer-text">
+          <!-- Contact Info -->
+          <div class="footer-info">
+            <p>732/21 Second Street, Manchester King<br />Street, Kingston,United Kingdom</p>
+            <p class="font-bold pt-[20px]">T: +65 (0) 76-890-214</p>
+            <p class="font-bold">E: bookings@grandburger.com</p>
+          </div>
+
+          <!-- Social Links -->
+          <div>
+            <ul class="footer-social">
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copy">© COPYRIGHT THEMEGOODS ALL RIGHT RESERVED.</p>
+        <p class="footer-brand">Original</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- EmailJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- JavaScript Entry File -->
+  <script src="/src/main.js"></script>
+  <script>
+    window.history.scrollRestoration = "manual";
+    window.addEventListener("load", function () {
+      window.scrollTo(0, 0);
+    });
+  </script>
+
+</body>
+
+</html>
