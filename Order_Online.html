@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resturant</title>
+
+  <!-- JavaScript Modules -->
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Tailwind CSS -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Swiper CSS (for sliders/carousels) -->
+  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css" />
+  <style>
+    body {
+      visibility: hidden;
+    }
+  </style>
+  <script type="module" crossorigin src="/resturant/assets/main-02kD-y_L.js"></script>
+  <link rel="stylesheet" crossorigin href="/resturant/assets/main-CMLTP0gQ.css">
+  <link rel="stylesheet" crossorigin href="/resturant/assets/order-RvMKbAoH.css">
+</head>
+
+
+  <body>
+    <!-- Mobile Navigation Menu -->
+    <header>
+      <div id="mobile-nav" class="mobile-nav">
+        <button id="menu-close" class="menu-close">✕</button>
+        <ul>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="menu.html">OUR MENU</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="Order.html">ORDER ONLINE</a></li>
+          <li><a href="location.html">FIND US</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- Main Content Wrapper -->
+    <div id="main-content" class="main-content">
+      <div id="progress">
+  <span id="progress-value">&#x1F815;</span>
+</div>
+
+          <div id="overlay" class="overlay"></div>
+
+    <!-- Main Header (Visible Initially) -->
+    <header class="header main-header">
+      <div class="main-header-container">
+        <!-- Left Nav Links -->
+        <div id="home" class="nav-left hidden lg:block" data-aos="fade-right">
+          <ul class="nav-list">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="menu.html">OUR MENU</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+          </ul>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo-container" data-aos="fade-down">
+          <h1>GRAND <span class="icon">🍔</span> BURGER</h1>
+        </div>
+
+        <!-- Right Nav Links -->
+        <div class="nav-right hidden lg:block" data-aos="fade-left">
+          <ul class="nav-list">
+            <li><a href="Order_Online">ORDER ONLINE</a></li>
+            <li><a href="location.html">FIND US</a></li>
+            <li>
+              <a href="https://facebook.com" target="_blank">
+                <i class="fab fa-facebook fa-2x" style="color:#ffffff;"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="menu-button">
+          ☰
+        </button></div>
+    </header>
+
+    <!-- Fixed Header (Appears on Scroll) -->
+    <header class="header fix-header">
+      <div class="fix-header-container">
+        <div class="nav-left hidden lg:block">
+          <ul class="nav-list">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="menu.html">OUR MENU</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+          </ul>
+        </div>
+
+        <!-- Logo -->
+        <div class="logo-container">
+          <h1>GRAND <span class="icon">🍔</span> BURGER</h1>
+        </div>
+
+        <div class="nav-right hidden lg:block">
+          <ul class="nav-list">
+            <li><a href="Order_Online.html">ORDER ONLINE</a></li>
+            <li><a href="location.html">FIND US</a></li>
+            <li>
+              <a href="https://facebook.com" target="_blank">
+                <i class="fab fa-facebook fa-2x" style="color:#ffffff;"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="menu-button lg:hidden">
+          ☰
+        </button>
+      </div>
+    </header>
+
+
+        <section class="hero-section">
+    <div class="hero-container">
+        <div class="category">
+            <!-- Burger -->
+            <div class="logo-item">
+                <img src="/resturant/assets/burger-logo-DUsxc4QL.png" alt="Burger" class="w-20 h-20 rounded-full shadow-md">
+                <p>Burger</p>
+            </div>
+
+            <!-- Fries -->
+            <div class="logo-item">
+                <img src="/resturant/assets/fries_logo-BF4DhcnH.png" alt="Fries" class="w-20 h-20 rounded-full shadow-md">
+                <p>Fries</p>
+            </div>
+
+            <!-- Sandwich -->
+            <div class="logo-item">
+                <img src="/resturant/assets/sandwich-logo-g17hNvYF.png" alt="Sandwich" class="w-20 h-20 rounded-full shadow-md">
+                <p>Sandwich</p>
+            </div>
+
+            <!-- Drink -->
+            <div class="logo-item">
+                <img src="/resturant/assets/drinks-logo-CKH4Moqa.png" alt="Drink" class="w-20 h-20 rounded-full shadow-md">
+                <p>Drink</p>
+            </div>
+
+            <!-- Salad -->
+            <div class="logo-item">
+                <img src="/resturant/assets/salad-logo-B9PdPToq.png" alt="Salad" class="w-20 h-20 rounded-full shadow-md">
+                <p>Salad</p>
+            </div>
+
+            <!-- Dessert -->
+            <div class="logo-item">
+                <img src="/resturant/assets/desserts-BSz4Uaim.png" alt="Dessert" class="w-20 h-20 rounded-full shadow-md">
+                <p>Dessert</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+         <!-- Subscribe Section -->
+    <section class="subscribe-section">
+      <div class="subscribe-container">
+        <!-- Title with lines -->
+        <div class="subscribe-title">
+          <div class="subscribe-line"></div>
+          <span class="subscribe-text">SUBSCRIBE NOW</span>
+          <div class="subscribe-line"></div>
+        </div>
+
+        <div class="subscribe-text-form">
+          <!-- Subtext -->
+          <p class="subscribe-subtext">
+            Subscribe now to receive fresh<br />
+            deals & offers by email.
+          </p>
+
+          <!-- Subscription Form -->
+          <form class="subscribe-form">
+            <input type="email" placeholder="Email" class="subscribe-input" />
+            <button type="submit" class="subscribe-button">Sign up</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="logo-container">
+          <h1>GRAND <span class="icon">🍔</span> BURGER</h1>
+        </div>
+
+        <div class="footer-text">
+          <!-- Contact Info -->
+          <div class="footer-info">
+            <p>732/21 Second Street, Manchester King<br />Street, Kingston,United Kingdom</p>
+            <p class="font-bold pt-[20px]">T: +65 (0) 76-890-214</p>
+            <p class="font-bold">E: bookings@grandburger.com</p>
+          </div>
+
+          <!-- Social Links -->
+          <div>
+            <ul class="footer-social">
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copy">© COPYRIGHT THEMEGOODS ALL RIGHT RESERVED.</p>
+        <p class="footer-brand">Original</p>
+      </div>
+    </footer>
+    </div>
+      <!-- EmailJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- JavaScript Entry File -->
+  <script src="/src/main.js"></script>
+
+
+  </body>
+</html>
