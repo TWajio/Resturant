@@ -12,11 +12,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: "index.html",
-        about: "about.html",
-        contact: "contact.html",
-      },
-    },
+        main: resolve(__dirname, 'index.html'),
+        about: resolve(__dirname, 'about.html'),
+        order: resolve(__dirname, 'order_online.html'),
+      }
+    }
   },
   base: "/resturant/",
 });
