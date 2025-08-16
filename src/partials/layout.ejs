@@ -1,0 +1,30 @@
+
+  <body>
+    <!-- Mobile Navigation Menu -->
+    <header>
+      <div id="mobile-nav" class="mobile-nav">
+        <button id="menu-close" class="menu-close">✕</button>
+        <ul>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="menu.html">OUR MENU</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="Order.html">ORDER ONLINE</a></li>
+          <li><a href="location.html">FIND US</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- Main Content Wrapper -->
+    <div id="main-content" class="main-content">
+      <div id="progress">
+  <span id="progress-value">&#x1F815;</span>
+</div>
+
+      <%- include("src/partials/navbar") %>
+
+        <%- body %>
+        <%- include("src/partials/subscribe_footer") %>
+    </div>
+    <%- include("src/partials/script.ejs") %>
+
+  </body>
+</html>

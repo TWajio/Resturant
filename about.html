@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resturant</title>
+
+  <!-- JavaScript Modules -->
+  <script type="module" src="/src/main.js"></script>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="./src/css/about.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Swiper CSS (for sliders/carousels) -->
+  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css" />
+  <style>
+    body {
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<%- include("src/partials/layout.ejs", { 
+  title: "Home Page", 
+  body: include("src/pages/about.ejs")
+}) %>

@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@theme {
+  --color-background: #1c2123;
+  --color-primary: #ffffff;
+  --color-secondary: #dc9457;
+  --color-text: #666666;
+}
+@theme {
+  --text-xbig: 70px;
+  --text-big: 50px;
+  --text-mid: 27px;
+  --text-sm: 16px;
+}
+@keyframes slideUpFade {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+.hero-section{
+    @apply bg-[#222222] py-15;
+}
+.hero-container{
+  @apply text-center  max-w-330 flex flex-col justify-center items-center 
+  mx-auto px-5 md:px-10 pt-20;
+  }
+
+.category{
+    @apply flex flex-row justify-between text-center w-full px-20 ;
+}
+
+.logo-item{
+    @apply flex flex-col items-center cursor-pointer hover:scale-110 transition-all ease-in-out;
+
+}
+
+.logo-item p{
+        @apply text-primary ;
+    }

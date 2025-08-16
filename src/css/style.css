@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 html {
   scroll-behavior: smooth;
@@ -6,9 +6,10 @@ html {
 
 body {
   @apply font-sans text-[#333] bg-primary leading-relaxed;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
-html, body {
+html,
+body {
   @apply overflow-x-hidden;
 }
 
@@ -18,8 +19,8 @@ html, body {
   --color-secondary: #dc9457;
   --color-text: #666666;
 }
-@theme{
-  --text-xbig: 70px;  
+@theme {
+  --text-xbig: 70px;
   --text-big: 50px;
   --text-mid: 27px;
   --text-sm: 16px;
@@ -45,27 +46,44 @@ html, body {
 .overlay.show {
   @apply block opacity-100;
 }
-.main-content{
+
+#progress {
+  @apply bg-[#03cc65] fixed bottom-5 right-2 h-18 w-18 grid place-items-center 
+  rounded-full shadow-lg cursor-pointer z-[9999] 
+  hover:scale-110 hover:shadow-2xl transition-transform duration-200;
+}
+
+#progress-value {
+  @apply h-[calc(100%-15px)] w-[calc(100%-15px)] bg-white rounded-full grid 
+  place-items-center text-[35px] text-[#001a2e];
+}
+
+
+
+
+.main-content {
   @apply transition-transform duration-500;
 }
-.main-content.main-show{
-  @apply -translate-x-[250px] md:-translate-x-[400px];
+.main-content.main-show {
+  @apply -translate-x-50 md:-translate-x-70;
 }
 .main-header {
-  @apply fixed py-[15px] md:py-[40px] flex justify-center items-center w-full top-0 z-[100];      
+  @apply fixed py-4 md:py-10 flex justify-center items-center mx-auto w-full top-0 z-[100];
 }
-.main-header-container{
-  @apply text-primary flex justify-between items-center max-w-screen-xl w-full px-4 md:px-8 mx-auto h-20;
+.main-header-container {
+  @apply flex justify-between text-primary my-3 items-center max-w-330 w-full 
+          px-5 md:px-10;
 }
 .main-header.hide {
   @apply hidden;
 }
 .fix-header {
-  @apply fixed top-[-100px] py-[7px] shadow-xl transition-all duration-300 text-white flex
-  justify-center items-center w-full  z-[100] bg-background ;      
+  @apply fixed top-[-100px] py-[7px] shadow-xl transition-all duration-300 flex
+         justify-center items-center w-full mx-auto z-[100] bg-background;
 }
-.fix-header-container{
-  @apply text-primary  flex justify-between items-center max-w-screen-xl w-full px-4 md:px-8 mx-auto h-20;
+.fix-header-container {
+  @apply flex justify-between text-primary my-3 items-center max-w-330 w-full 
+          px-5 md:px-10;
 }
 .fix-header.show {
   @apply top-0;
@@ -73,337 +91,62 @@ html, body {
 .main-header .logo-container {
   @apply border-2 border-white p-[3px_10px] md:px-[30px] cursor-pointer inline-block;
   h1 {
-  @apply text-white font-medium text-[clamp(1rem,5vw,1.7rem)] m-0 flex items-center gap-2 ;
-}
+    @apply text-white font-medium text-[clamp(.5rem,5vw,1.7rem)] m-0 flex items-center gap-2;
+  }
 }
 .fix-header .logo-container {
   @apply border-2 border-white px-[15px] md:px-[22px] cursor-pointer inline-block;
   h1 {
-  @apply text-white font-medium  text-[clamp(1rem,5vw,25px)] m-0 p-0 flex items-center ;
-}
+    @apply text-white font-medium  text-[clamp(.5rem,5vw,1.7rem)] m-0 p-0 flex items-center;
+  }
 }
 .logo-container .icon {
-  font-size: 28px;
+  @apply text-[clamp(.5rem,5vw,25px)] m-0;
 }
-
 
 .nav-list {
-  @apply flex gap-[40px] font-bold items-center justify-center ;
+  @apply flex gap-[40px] font-bold items-center justify-center;
   li a {
-  @apply relative text-sm hover:text-secondary;
-}
+    @apply relative text-sm hover:text-secondary;
+  }
   a::after {
-  content: '';
-  @apply absolute left-0 bottom-[-8px] w-0 h-[3px] bg-secondary transition-all duration-300 ease-in-out;
-}
+    content: "";
+    @apply absolute left-0 bottom-[-8px] w-0 h-[3px] bg-secondary transition-all duration-300 
+  ease-in-out;
+  }
   a:hover::after {
-  @apply w-full;
-}
+    @apply w-full;
+  }
 }
 .menu-button {
-  @apply fixed right-4 text-white text-3xl cursor-pointer z-[150];
+  @apply text-white lg:hidden text-[clamp(1.3rem,5vw,1.7rem)] cursor-pointer z-[150];
 }
 
-.menu-close{
-  @apply text-white text-mid font-extrabold top-4 left-4 mb-[10px];
+.menu-close {
+  @apply text-white text-mid font-extrabold mb-[10px];
 }
 .mobile-nav {
-  @apply fixed text-primary text-mid font-bold top-0 h-full w-[250px] md:w-[400px] bg-background 
-  z-[200] p-8 shadow-xl transition-all duration-500 -right-100;
+  @apply fixed text-primary text-[20px] sm:text-mid font-bold top-0 h-full w-50 md:w-70 
+  bg-background z-[200] p-8 shadow-xl transition-all duration-500 -right-100;
 }
 .mobile-nav.show {
   @apply right-0;
 }
 
-
-
-.hero-bg {
-  @apply absolute inset-0 w-full h-full object-cover;
+.mobile-nav ul{
+@apply flex flex-col gap-5 sm:gap-0;
 }
-
-.hero-section {
-  @apply relative h-[100vh] w-full flex items-center justify-center overflow-hidden;
-}
-
-.hero-image {
-  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-  w-[300px] sm:w-[500px] lg:w-[600px] z-0 pointer-events-none;
-}
-
-.hero-mayonnaise-image {
-  @apply hidden sm:block absolute top-1/2 left-1/2 translate-x-[100px] translate-y-[65px]
-  w-[80px] sm:w-[150px] lg:w-[200px] z-0 pointer-events-none;
-}
-
-
-.hero-Tomato-image {
-  @apply hidden absolute top-1/2 left-1/2 -translate-x-[600px] -translate-y-[65px]
-  w-[270px] z-0 pointer-events-none lg:block;
-}
-
-
-
-.hero-content {
-  @apply relative z-10 text-center;
-}
-/* In your CSS file */
-.hero-title {
-  @apply text-white mx-auto font-bold 
-         text-[50px] sm:text-[60px] lg:text-[100px] 
-         leading-[0.9] 
-         max-w-[90%] md:max-w-[600px]
-         origin-bottom mb-90;
-  
-  transform: scaleY(0);
-  animation: slideUpFade 0.5s ease-out 0.5s forwards;
-}
-
-
-
-
-.hero-bottom {
-  @apply absolute bottom-30 sm:bottom-20 gap-5 w-full max-w-[88rem] flex flex-row 
-  justify-between text-white z-10 px-5 sm:px-10 md:px-20;
-}
-.hero-text{
-  @apply flex flex-col gap-2; 
-  h3{
-    @apply text-mid font-bold;
-  }
-  p{
-    @apply w-full md:max-w-[600px] leading-5 text-justify;
-  }
-}
-.sign{
-  @apply hidden lg:block leading-7 items-center tracking-[3px];
-  h3{
-    @apply text-mid font-bold;
-  }
-  h2{
-    @apply text-[30px] font-bold ;
-  font-family: 'Pacifico', cursive;
-  }
-}
-
-.burgers-section {
-  @apply text-center py-15 pb-0 sm:pb-25 bg-background;
-}
-
-.burgers-header {
-  @apply flex justify-center md:justify-between items-center mx-auto md:gap-10 lg:gap-20 flex-row mt-[36px] 
-  max-w-[88rem] px-20;
-}
-
-.burger-text {
-  @apply hidden md:block text-sm lg:w-90 lg:text-mid text-[#666666] font-bold border-t-3 border-b-3 border-[#666666] py-1;
-}
-
-.burger-title {
-  @apply text-[25px] lg:text-[48px] w-[250px] lg:w-[380px] font-bold text-[#f7a32b] border-t-3 leading-9 
-  lg:leading-13 border-b-3 border-secondary py-2 lg:py-5 px-2;
-}
-
-.burgers-list {
-  @apply flex justify-center lg:justify-between items-center max-w-[90rem] 
-  flex-wrap my-15 mx-auto md:px-20 ;
-}
-
-.burger-item {
-  @apply max-w-xs mx-10 lg:mx-0;
-}
-
-.burger-item img {
-  @apply w-full;
-}
-
-.burger-item h3 {
-  @apply text-[36px]  mx-20 sm:mx-0 sm:text-big my-2 text-primary leading-10 sm:leading-13 font-bold;
-}
-
-.burger-item p {
-  @apply text-sm text-[#9b9b9b] mt-8;
-}
-
-.devider-title {
-  @apply flex items-center justify-center px-2 sm:px-10 md:px-20;
-}
-
-.devider-line {
-  @apply flex-grow border-t-3 border-secondary max-w-[520px];
-}
-
-.devider-text {
-  @apply mx-4 text-secondary font-extrabold sm:text-[1.2rem];
-}
-
-.burger-bottom {
-  @apply flex flex-col lg:flex-row justify-center px-0 lg:px-10
-  items-stretch mx-auto gap-0 lg:gap-4 mt-[75px] max-w-[1330px];
-}
-.burger-img {
-  @apply w-full lg:w-1/2 flex justify-center items-center  sm:px-10 md:px-20 lg:px-0 ;
-}
-.burger-img img {
-  @apply w-full h-full object-cover;
-}
-
-.burger-cards {
-  @apply flex flex-col md:flex-row w-full  gap-0 lg:gap-4 h-auto;
-}
-
-.card {
-  @apply bg-primary text-black p-5 flex-1 flex flex-col text-left;
-}
-.burger-cards > .card:nth-child(2) {
-  @apply bg-[#e7e7e7];
-}
-.card h4 {
-  @apply text-big font-bold mb-2 ml-10 mt-8 leading-15;
-}
-
-.card h4 span {
-  @apply text-[35px] font-bold underline underline-offset-5;
-}
-.card p{
-  @apply mx-10 text-justify mb-7;
-}
-
-.btn-orange {
-  @apply bg-[#f7a32b] border-none px-8 py-3 mx-10 w-50 md:w-[78%]  text-white cursor-pointer 
-         rounded-[5rem] transition-all duration-300 ease-in-out 
-         hover:bg-[#c78323] hover:shadow-lg hover:scale-105 ;
-}
-
-.btn-black {
-  @apply bg-black border-none px-8 py-3 mx-10 w-50 md:w-[78%] text-white cursor-pointer 
-         rounded-[5rem] transition-all duration-300 ease-in-out 
-         hover:bg-gray-900 hover:shadow-lg hover:scale-105 mt-13 mb-15;
-}
-.presentation{
-  @apply flex flex-col gap-0 p-0 my-0;
-}
-.presentation-row {
-  @apply flex flex-col md:flex-row h-auto lg:h-auto items-stretch;
-}
-.presentation-row-1 {
-  @apply flex flex-col-reverse md:flex-row h-auto lg:h-auto items-stretch;
-}
-
-.presentation-image {
-  @apply w-full md:w-1/2 h-auto lg:h-auto overflow-hidden flex bg-[green];
-}
-
-.presentation-image img {
-  @apply w-full h-full object-cover block m-0 p-0;
-}
-
-.presentation-card-1 {
-  @apply w-full md:w-1/2 bg-primary px-10;
-}
-.presentation-card-2 {
-  @apply w-full md:w-1/2 bg-background px-10;
-}
-
- .presentation-header {
-  @apply flex items-center justify-center pt-15 mb-10;
-}
-
-.presentation-line {
-  @apply flex-grow border-t-3 border-[#091925] ;
-}
-.presentation-line-2 {
-  @apply flex-grow border-t-3 border-primary ;
-}
-.presentation-logo-1 {
-  @apply text-[#091925] text-mid font-bold mx-5;
-}
-
-.presentation-logo-2 {
-  @apply text-primary text-mid font-bold mx-5;
-}
-
-.presentation-line-2 {
-  @apply flex-grow border-t-3 ;
-}
-  
-.presentation-text{
-  @apply flex flex-col justify-center items-center mx-auto;
-}
-
-.presentation-text h1 {
-  @apply text-big md:text-xbig flex flex-col 
-  justify-center items-center font-bold leading-22 -mt-[25px] md:mt-0;
-}
-
-.presentation-card-1 span {
-  @apply text-big md:text-xbig text-[#f34801] -mt-15 md:-mt-3 mb-10;
-   font-family: 'Pacifico', cursive;
-}
-
-.presentation-card-1 h4 {
-  @apply text-lg font-medium mb-10 text-[#091925]; 
-}
-
-.presentation-card-1 p {
-  @apply text-gray-600 mb-6 text-justify leading-relaxed;
-}
-.presentation-card-2 h4 {
-  @apply text-lg font-medium my-10 text-primary text-center; 
-}
-
-.presentation-card-2 p {
-  @apply text-primary mb-6 text-justify leading-relaxed;
-}
-.view-menu-1 {
-  @apply bg-[#f34801] text-white mb-15 font-semibold px-6 py-3 rounded-lg
-         transition-all duration-300 ease-in-out;
-}
-.view-menu-1:hover {
-  @apply bg-[#d84c10] shadow-lg scale-105;
-}
-
-.view-menu-2 {
-  @apply bg-[#fae38d] text-black mb-15 font-semibold px-6 py-3 rounded-lg
-         transition-all duration-300 ease-in-out;
-}
-.view-menu-2:hover {
-  @apply bg-yellow-400 shadow-lg scale-105;
-}
-
-.bottom-presentation {
-  @apply w-full h-full;
-}
-
-.bottom-presentation-img {
-  @apply relative  w-full h-full z-[0];
-}
-.bottom-presentation-img img {
-  @apply w-full min-w-[600px];
-}
-.bottom-presentation-text {
-  @apply absolute top-0 left-1/2 transform -translate-x-1/2 flex justify-center items-start w-full pt-20;
-}
-
-.bottom-presentation-text h1 {
-  @apply flex items-center justify-center text-3xl md:text-xbig font-bold text-primary m-0;
-}
-
-.bottom-presentation-text h1 span {
-  @apply text-primary text-[40px] underline underline-offset-9 mr-3;
-}
-
-
 
 .subscribe-section {
-  @apply bg-background py-[36px] px-5 sm:px-10 md:px-20 ;
+  @apply bg-background px-5 md:px-10 py-15;
 }
 
 .subscribe-container {
-  @apply max-w-[78rem] mx-auto text-center my-[36px] ;
+  @apply max-w-330 mx-auto text-center flex flex-col px-5 md:px-10 ;
 }
 
 .subscribe-title {
-  @apply flex items-center justify-center ;
+  @apply flex items-center justify-center;
 }
 
 .subscribe-line {
@@ -413,7 +156,7 @@ html, body {
 .subscribe-text {
   @apply mx-4 text-secondary font-extrabold text-[1.2rem];
 }
-.subscribe-text-form{
+.subscribe-text-form {
   @apply flex flex-col md:flex-row justify-center gap-[30px] mt-[50px];
 }
 .subscribe-subtext {
@@ -434,30 +177,26 @@ html, body {
          hover:bg-orange-600 transition duration-300;
 }
 
-
-
-
 .footer {
   @apply bg-white text-neutral-800 py-12 px-4 md:px-8 lg:px-16;
 }
 
 .footer-content {
   @apply max-w-6xl mx-auto my-[36px] flex flex-col items-center gap-[36px];
-.logo-container {
-  @apply border-2 border-background p-[3px_30px] cursor-pointer inline-block;
-}
-.logo-container h1 {
-  @apply text-background font-bold text-[1.8rem] m-0 flex items-center gap-2;
-}
+  .logo-container {
+    @apply border-2 border-background p-[3px_30px] cursor-pointer inline-block;
+  }
+  .logo-container h1 {
+    @apply text-background font-bold text-[1.8rem] m-0 flex items-center gap-2;
+  }
 
-.logo-container .icon {
-  font-size: 28px;
+  .logo-container .icon {
+    font-size: 28px;
+  }
 }
-}
-.footer-text{
+.footer-text {
   @apply flex flex-col sm:flex-row gap-5;
 }
-
 
 .footer-info {
   @apply text-center md:text-left leading-relaxed space-y-1 font-normal;
@@ -470,8 +209,9 @@ html, body {
   @apply relative text-neutral-700 hover:text-secondary;
 }
 .footer-social a::after {
-  content: '';
-  @apply absolute left-0 bottom-[-8px] w-0 h-[3px] bg-secondary transition-all duration-300 ease-in-out;
+  content: "";
+  @apply absolute left-0 bottom-[-8px] w-0 h-[3px] bg-secondary transition-all 
+  duration-300 ease-in-out;
 }
 
 .footer-social a:hover::after {
@@ -483,13 +223,14 @@ html, body {
 }
 
 .footer-copy {
-  @apply  underline underline-offset-4 decoration-2;
+  @apply underline underline-offset-4 decoration-2;
 }
 
 .footer-brand {
   @apply font-normal text-[2rem] text-black;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
-.footer-copy, .footer-brand {
+.footer-copy,
+.footer-brand {
   @apply sm:w-1/2 text-center;
 }

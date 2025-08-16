@@ -1,0 +1,283 @@
+@import "tailwindcss";
+@theme {
+  --color-background: #1c2123;
+  --color-primary: #ffffff;
+  --color-secondary: #dc9457;
+  --color-text: #666666;
+}
+@theme {
+  --text-xbig: 70px;
+  --text-big: 50px;
+  --text-mid: 27px;
+  --text-sm: 16px;
+}
+@keyframes slideUpFade {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+.hero-section{
+  @apply bg-background;
+}
+.hero-container{
+  @apply text-center pt-30 sm:pt-50 max-w-330 flex flex-col justify-center items-center 
+  mx-auto px-5 md:px-10;
+  h2{
+    @apply text-white items-center text-big sm:text-xbig font-extrabold my-5
+    sm:my-10 leading-tight;
+  }
+  p{
+    @apply max-w-160 text-[#e18b47] text-sm font-medium tracking-wide 
+    leading-relaxed my-10 sm:my-15;
+  }
+}
+  .border-line {
+    @apply w-full h-3 mx-auto 
+      bg-[repeating-linear-gradient(135deg,#e18b47,#e18b47_2px,transparent_2px,transparent_6px)];
+  }
+  
+
+.burgers-section {
+  @apply bg-background pt-5 sm:py-10;
+}
+
+.burger-container {
+  @apply flex flex-col w-full mx-auto max-w-330 px-5 md:px-10;
+}
+
+.burgers-show {
+  @apply flex flex-col ;
+}
+
+ 
+.burgers-item{
+  @apply relative flex flex-col md:flex-row items-center ;
+  h1{
+    @apply text-[36px] md:text-big  text-primary leading-10 sm:leading-13 
+  font-bold;
+  } 
+  p{
+  @apply text-sm text-[#9b9b9b] max-w-100 ;
+  }
+ img{
+  @apply w-[80%] md:w-[250px];
+}
+ h2{
+    @apply md:absolute text-[#e18b47] text-mid font-bold right-0 mb-20;
+ }
+}
+.burgers-text{
+  @apply md:ml-10 md:mr-35 lg:mx-35 text-left;
+}
+
+
+.devider-title {
+  @apply flex items-center justify-center py-15;
+}
+
+.devider-line {
+  @apply flex-grow border-t-3 border-secondary;
+}
+
+.devider-text {
+  @apply mx-4 text-secondary font-extrabold sm:text-[1.2rem];
+}
+
+.menu{
+  @apply flex flex-col lg:flex-row justify-between w-full lg:gap-20;
+}
+
+.menu-item {
+  @apply flex justify-between items-start py-3 relative;
+}
+
+.menu-title {
+  @apply text-sm sm:text-[23px] font-bold text-white uppercase;
+}
+
+.menu-price {
+@apply text-sm sm:text-[23px] text-orange-400 font-bold;
+}
+
+.menu-new{
+  @apply bg-secondary text-[20px] sm:text-[23px] text-white px-4 py-2 mx-[-20px]
+         uppercase rounded-t w-[calc(100%+40px)];
+}
+
+.menu-desc {
+  @apply text-gray-400 text-sm uppercase;
+}
+
+
+  .hover-card {
+    @apply absolute bg-white shadow-lg p-4 rounded-lg w-48 left-full ml-2 
+    top-1/2 -translate-y-1/2 z-50 opacity-0 scale-95 pointer-events-none 
+    transition-all duration-300 ease-out;
+  }
+
+  .menu-item:hover .hover-card {
+    @apply opacity-100 scale-100 pointer-events-auto;
+  }
+
+
+.burger-bottom {
+  @apply flex flex-col lg:flex-row justify-between items-stretch gap-0
+  mt-20 sm:mt-25;
+}
+
+.burger-img img {
+  @apply w-full h-full object-cover block;
+}
+
+.burger-img {
+  @apply w-full sm:w-[80%] mx-auto lg:w-[32%];
+}
+
+.burger-cards {
+  @apply lg:w-[68%] flex flex-col sm:flex-row gap-0;
+}
+
+.card {
+  @apply bg-primary text-black flex flex-col w-full px-10 py-15 pb-25;
+}
+.burger-cards > .card:nth-child(2) {
+  @apply bg-[#e7e7e7];
+}
+.card h4 {
+  @apply text-big font-bold leading-13;
+}
+
+.card h4 span {
+  @apply text-[35px] font-bold underline underline-offset-5;
+}
+.card p {
+  @apply text-left my-10;
+}
+
+.btn-orange {
+  @apply bg-[#f7a32b] border-none w-50 py-3 mx-auto text-white cursor-pointer 
+         rounded-[5rem] transition-all duration-300 ease-in-out 
+         hover:bg-[#c78323] hover:shadow-lg hover:scale-105 mt-auto;
+}
+
+.btn-black {
+  @apply bg-black border-none w-50 py-3 mx-auto  text-white cursor-pointer 
+         rounded-[5rem] transition-all duration-300 ease-in-out 
+         hover:bg-gray-900 hover:shadow-lg hover:scale-105 mt-auto;
+}
+.presentation {
+  @apply flex flex-col;
+}
+.presentation-row {
+  @apply flex flex-col md:flex-row h-full items-stretch;
+}
+.presentation-row-1 {
+  @apply flex flex-col-reverse md:flex-row h-full items-stretch;
+}
+
+.presentation-image {
+  @apply w-full md:w-1/2 h-auto lg:h-auto overflow-hidden flex;
+}
+
+.presentation-image img {
+  @apply w-full h-full object-cover block;
+}
+
+.presentation-card-1 {
+  @apply w-full md:w-1/2 bg-primary px-10 pt-15;
+}
+.presentation-card-2 {
+  @apply w-full md:w-1/2  px-10 pt-15 bg-background flex flex-col;
+}
+
+.presentation-header {
+  @apply flex items-center justify-center;
+}
+
+.presentation-line {
+  @apply flex-grow border-t-3 border-[#091925];
+}
+.presentation-line-2 {
+  @apply flex-grow border-t-3 border-primary;
+}
+.presentation-logo-1 {
+  @apply text-[#091925] text-mid font-bold mx-5;
+}
+
+.presentation-logo-2 {
+  @apply text-primary text-mid font-bold mx-5;
+}
+
+.presentation-text {
+@apply flex flex-col items-center mx-auto  h-full pt-10;
+}
+
+.presentation-text h1 {
+  @apply text-big md:text-xbig top-0 text-center
+   items-center font-bold p-[0px] leading-tight;
+}
+
+.presentation-card-1 span {
+  @apply text-big md:text-xbig text-[#f34801] mt-[-30px];
+  font-family: "Pacifico", cursive;
+}
+
+.presentation-card-1 h4 {
+  @apply text-lg font-medium mb-5 text-[#091925];
+}
+
+.presentation-card-1 p {
+  @apply text-gray-600 text-justify leading-relaxed;
+}
+.presentation-card-2 h4 {
+  @apply text-lg font-medium my-5 text-primary text-center;
+}
+
+.presentation-card-2 p {
+  @apply text-primary text-justify leading-relaxed;
+}
+.view-menu-1 {
+  @apply bg-[#f34801]  text-white mt-15 mb-15 lg:mb-30 font-semibold px-6 py-3
+   rounded-lg
+         transition-all duration-300 ease-in-out;
+}
+.view-menu-1:hover {
+  @apply bg-[#d84c10] shadow-lg scale-105;
+}
+
+.view-menu-2 {
+  @apply bg-[#fae38d] text-black mt-15 mb-15 lg:mb-30 font-semibold px-6 py-3 rounded-lg
+         transition-all duration-300 ease-in-out;
+}
+.view-menu-2:hover {
+  @apply bg-yellow-400 shadow-lg scale-105;
+}
+
+.bottom-presentation {
+  @apply w-full h-full;
+}
+
+.bottom-presentation-img {
+  @apply relative  w-full h-full z-[0] min-h-80 items-stretch bg-green-800;
+}
+.bottom-presentation-img img {
+  @apply  h-full min-w-[600px] min-h-80;
+}
+.bottom-presentation-text {
+  @apply absolute top-0 left-1/2 transform -translate-x-1/2 flex justify-center 
+  items-start w-full pt-5 sm:pt-20;
+}
+
+.bottom-presentation-text h1 {
+  @apply flex items-center justify-center text-3xl md:text-xbig font-bold
+   text-primary flex-wrap;
+}
+
+.bottom-presentation-text h1 span {
+  @apply text-primary text-[40px] underline underline-offset-9 mr-3;
+}

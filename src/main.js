@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuClose = document.getElementById("menu-close");
     const mainContent = document.querySelector(".main-content");
     const overlay = document.getElementById('overlay');
-
-   const title = document.querySelector(".hero-title");
+    const title = document.querySelector(".hero-title");
+    
     // Scroll behavior for hiding/showing headers
     window.addEventListener('scroll', () => {
         let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -31,7 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
             mainHeader.classList.remove('hide');
         }
     });
+  
+    //Apply Active 
+    const path = window.location.pathname.split("/").pop(); // e.g., menu.html
+    const hash = window.location.hash; // e.g., #home
+    const navLinks = document.querySelectorAll(".header .nav-list li a");
+    navLinks.forEach(link => {
+      const href = link.getAttribute("href");
+      // Check for page match or hash match
+      if (href === path || href === hash || (href === "index.html" && path === "")) {
+        link.classList.add("active");
+      } 
+      // Don't remove active if nothing matches (preserves manually set)
+    });
 
+//Mobile menu toggle
 menuToggle.forEach(button => {
   button.addEventListener("click", () => {
     mobileNav.classList.add("show");
@@ -39,19 +53,48 @@ menuToggle.forEach(button => {
     overlay.classList.add('show'); // fade in
   });
 });
-
 menuClose.addEventListener("click", () => {
   mobileNav.classList.remove("show");
   mainContent.classList.remove("main-show");
   overlay.classList.remove('show'); // fade out
 });
+
+//Bottom to top button
+  let calcScrollValue = () => {
+  let scrollProgress = document.getElementById("progress");
+  let progressValue = document.getElementById("progress-value");
+  let pos = document.documentElement.scrollTop;
+  let calcHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrollValue = Math.round((pos * 100) / calcHeight);
+  if (pos > 100) {
+    scrollProgress.style.display = "grid";
+  } else {
+    scrollProgress.style.display = "none";
+  }
+  scrollProgress.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+  });
+  scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+};
+window.onscroll = calcScrollValue;
+window.onload = calcScrollValue;
+window.history.scrollRestoration = "manual";
+window.addEventListener("load", function () {
+  window.scrollTo(0, 0);
+});
+
+
+
+
 });
 
 // Wait until everything (CSS/images) is loaded
 window.addEventListener("load", () => {
     window.scrollTo(0, 0); // start from top
     AOS.init({
-        once: false,
+        once: true,
         offset: 200,
         duration: 800,
     });
