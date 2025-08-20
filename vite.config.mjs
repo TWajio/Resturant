@@ -16,7 +16,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         our_menu: resolve(__dirname, "menu.html"),
         about: resolve(__dirname, "about.html"),
-        order: resolve(__dirname, "order_online.html"),
+        order: resolve(__dirname, "Order_Online.html"),
       },
     },
   },
