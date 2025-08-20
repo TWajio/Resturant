@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resturant</title>
 
-  <!-- JavaScript Modules -->
+  <!-- JavaScript Modules -->
 
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -28,13 +28,11 @@
       visibility: hidden;
     }
   </style>
-  <script type="module" crossorigin src="/resturant/assets/item-Bb5jd6bH.js"></script>
-  <link rel="modulepreload" crossorigin href="/resturant/assets/main-CJqd7nGP.js">
-  <link rel="modulepreload" crossorigin href="/resturant/assets/menu-B8h8u9C2.js">
+  <script type="module" crossorigin src="/resturant/assets/main-CJqd7nGP.js"></script>
+  <script type="module" crossorigin src="/resturant/assets/menu-B8h8u9C2.js"></script>
   <link rel="stylesheet" crossorigin href="/resturant/assets/main-Co3DJbm9.css">
-  <link rel="stylesheet" crossorigin href="/resturant/assets/item-Dd5EMpSa.css">
+  <link rel="stylesheet" crossorigin href="/resturant/assets/order-CdEDLofi.css">
 </head>
-
 
 
   <body>
@@ -131,36 +129,86 @@
     </header>
 
 
-          <div class="container mx-auto px-4 py-8">
-    <div id="item-details" class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6">
-      <h1 id="item-name" class="text-3xl font-bold text-center mb-6"></h1>
-      
-      <div class="flex flex-col md:flex-row gap-6 items-center">
-        <img id="item-image" class="w-full md:w-1/2 rounded-lg shadow-md" alt="Item Image">
-        
-        <div class="w-full md:w-1/2">
-          <p id="item-description" class="text-gray-700 text-lg mb-4"></p>
-          <p id="item-calories" class="text-gray-600 mb-2"></p>
-          <p id="item-price" class="text-2xl font-bold text-green-600 mb-6"></p>
-          
-          <button onclick="window.history.back()" 
-                  class="w-full bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600 transition-colors">
-            ⬅ Back to Menu
-          </button>
-        </div>
-      </div>
+        <section class="hero-section">
+  <div class="logo">
+    <!-- Burger -->
+    <div class="logo-item">
+      <img src="/resturant/assets/burger-logo-DUsxc4QL.png" alt="Burger" class="w-20 h-20 rounded-full shadow-md">
+      <p>Burger</p>
     </div>
 
-    <div id="item-not-found" class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6 text-center hidden">
-      <h2 class="text-2xl font-bold text-red-600 mb-4">Item Not Found</h2>
-      <p class="text-gray-700 mb-4">The requested item could not be found.</p>
-      <button onclick="window.history.back()" 
-              class="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition-colors">
-        ⬅ Back to Menu
-      </button>
+    <!-- Fries -->
+    <div class="logo-item">
+      <img src="/resturant/assets/fries_logo-BF4DhcnH.png" alt="Fries" class="w-20 h-20 rounded-full shadow-md">
+      <p>Fries</p>
+    </div>
+
+    <!-- Sandwich -->
+    <div class="logo-item">
+      <img src="/resturant/assets/sandwich-logo-g17hNvYF.png" alt="Sandwich" class="w-20 h-20 rounded-full shadow-md">
+      <p>Sandwich</p>
+    </div>
+
+    <!-- Drink -->
+    <div class="logo-item">
+      <img src="/resturant/assets/drinks-logo-CKH4Moqa.png" alt="Drink" class="w-20 h-20 rounded-full shadow-md">
+      <p>Drink</p>
+    </div>
+
+    <!-- Salad -->
+    <div class="logo-item">
+      <img src="/resturant/assets/salad-logo-B9PdPToq.png" alt="Salad" class="w-20 h-20 rounded-full shadow-md">
+      <p>Salad</p>
+    </div>
+
+    <!-- Dessert -->
+    <div class="logo-item">
+      <img src="/resturant/assets/desserts-BSz4Uaim.png" alt="Dessert" class="w-20 h-20 rounded-full shadow-md">
+      <p>Dessert</p>
     </div>
   </div>
+</section>
+<section class="menu-section">
+  <div class="menu-container ">
+    <div class="flex flex-row justify-between py-10">
+      <!-- Section title -->
+      <h2 class="hidden sm:block">Showing <span id="menu-count"></span> items</h2>
 
+      <!-- Sorting buttons -->
+<div class="sort-buttons flex items-center">
+  <label for="sort" class="mr-3 font-semibold text-gray-700 text-lg">Sort by:</label>
+  <select id="sort" onchange="handleSort(event)">
+    <option value="" class="text-gray-700">Select option</option>
+    <option value="name" class="text-gray-700">Name (A-Z)</option>
+    <option value="price" class="text-gray-700">Price (Low to High)</option>
+    <option value="popularity" class="text-gray-700">Most Popular</option>
+  </select>
+</div>
+      
+      
+
+    </div>
+
+
+    <!-- Menu items container -->
+    <div class="category">
+      <div class="category-container">
+<!-- Items will be inserted here dynamically via JS -->
+      </div>
+      
+    </div>
+  </div>
+</section>
+<div id="item-modal" class="fixed inset-0 bg-black bg-opacity-50 items-center justify-center hidden z-50">
+  <div class="bg-white p-6 rounded-lg max-w-sm w-full relative">
+    <button id="modal-close" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">&times;</button>
+    <img id="modal-image" src="" alt="" class="w-32 h-32 mx-auto mb-4 rounded-full shadow-md">
+    <h3 id="modal-name" class="text-xl font-bold text-center mb-2"></h3>
+    <p id="modal-description" class="text-gray-600 mb-2 text-center"></p>
+    <p id="modal-calories" class="text-gray-500 text-center mb-1"></p>
+    <p id="modal-price" class="text-gray-700 text-center font-semibold"></p>
+  </div>
+</div>
          <!-- Subscribe Section -->
     <section class="subscribe-section">
       <div class="subscribe-container">
