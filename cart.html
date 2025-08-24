@@ -28,10 +28,10 @@
       visibility: hidden;
     }
   </style>
-  <script type="module" crossorigin src="/resturant/assets/main-CmrZKIVw.js"></script>
-  <script type="module" crossorigin src="/resturant/assets/menu-D5qI5szB.js"></script>
+  <script type="module" crossorigin src="/resturant/assets/cart-CKrgN893.js"></script>
+  <link rel="modulepreload" crossorigin href="/resturant/assets/main-CmrZKIVw.js">
   <link rel="stylesheet" crossorigin href="/resturant/assets/main-z4C8ufxZ.css">
-  <link rel="stylesheet" crossorigin href="/resturant/assets/order-S7hTb1Z8.css">
+  <link rel="stylesheet" crossorigin href="/resturant/assets/cart-Dau73Nmm.css">
 </head>
 
 
@@ -129,72 +129,28 @@
     </header>
 
 
-        <section class="hero-section">
-  <div class="logo">
-    <!-- Burger -->
-    <div class="logo-item">
-      <img src="/resturant/images/burger-logo.png" alt="Burger" class="w-20 h-20 rounded-full shadow-md">
-      <p>Burger</p>
-    </div>
+        <!-- cart.ejs -->
+<section class="max-w-4xl mx-auto p-6 pt-30">
+  <h1 class="text-2xl font-bold mb-4">Your Cart</h1>
+  <div id="cart-page-items" class="space-y-4"></div>
 
-    <!-- Fries -->
-    <div class="logo-item">
-      <img src="/resturant/images/fries_logo.png" alt="Fries" class="w-20 h-20 rounded-full shadow-md">
-      <p>Fries</p>
-    </div>
+  <div class="flex justify-between text-lg mt-6">
+    <p class="font-semibold">Subtotal:</p>
+    <p id="cart-page-subtotal">0tk</p>
+  </div>
 
-    <!-- Sandwich -->
-    <div class="logo-item">
-      <img src="/resturant/images/sandwich-logo.png" alt="Sandwich" class="w-20 h-20 rounded-full shadow-md">
-      <p>Sandwich</p>
-    </div>
-
-    <!-- Drink -->
-    <div class="logo-item">
-      <img src="/resturant/images/drinks-logo.png" alt="Drink" class="w-20 h-20 rounded-full shadow-md">
-      <p>Drink</p>
-    </div>
-
-    <!-- Salad -->
-    <div class="logo-item">
-      <img src="/resturant/images/salad-logo.png" alt="Salad" class="w-20 h-20 rounded-full shadow-md">
-      <p>Salad</p>
-    </div>
-
-    <!-- Dessert -->
-    <div class="logo-item">
-      <img src="/resturant/images/desserts.png" alt="Dessert" class="w-20 h-20 rounded-full shadow-md">
-      <p>Dessert</p>
-    </div>
+  <div class="mt-6 flex justify-between">
+    <button onclick="window.location.href='Order_Online.html'" 
+            class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">
+      Continue Shopping
+    </button>
+    <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">
+      Checkout
+    </button>
   </div>
 </section>
-<section class="menu-section">
-  <div class="menu-container ">
-    <div class="flex flex-row justify-between py-0 sm:py-10">
-      <!-- Section title -->
-      <h2 class="hidden sm:block">Showing <span id="menu-count"></span> items</h2>
 
-      <!-- Sorting buttons -->
-      <div class="sort-buttons flex items-center">
-        <label for="sort" class="mr-3 font-semibold text-gray-700 text-lg">Sort by:</label>
-        <select id="sort" onchange="handleSort(event)">
-          <option value="" class="text-gray-700">Select option</option>
-          <option value="name" class="text-gray-700">Name (A-Z)</option>
-          <option value="price" class="text-gray-700">Price (Low to High)</option>
-          <option value="popularity" class="text-gray-700">Most Popular</option>
-        </select>
-      </div>
-    </div>
 
-    <!-- Menu items container -->
-    <div class="category">
-      <div class="category-container">
-        <!-- Items will be inserted here dynamically via JS -->
-      </div>
-
-    </div>
-  </div>
-</section>
          <!-- Subscribe Section -->
     <section class="subscribe-section">
       <div class="subscribe-container">

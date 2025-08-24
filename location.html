@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resturant</title>
 
-  <!-- JavaScript Modules -->
+  <!-- JavaScript Modules -->
 
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -29,9 +29,8 @@
     }
   </style>
   <script type="module" crossorigin src="/resturant/assets/main-CmrZKIVw.js"></script>
-  <script type="module" crossorigin src="/resturant/assets/menu-D5qI5szB.js"></script>
   <link rel="stylesheet" crossorigin href="/resturant/assets/main-z4C8ufxZ.css">
-  <link rel="stylesheet" crossorigin href="/resturant/assets/order-S7hTb1Z8.css">
+  <link rel="stylesheet" crossorigin href="/resturant/assets/location-DFMr45RM.css">
 </head>
 
 
@@ -129,71 +128,64 @@
     </header>
 
 
-        <section class="hero-section">
-  <div class="logo">
-    <!-- Burger -->
-    <div class="logo-item">
-      <img src="/resturant/images/burger-logo.png" alt="Burger" class="w-20 h-20 rounded-full shadow-md">
-      <p>Burger</p>
+        <section class="hero">
+    <!-- First Row -->
+    <div class="hero-row-1">
+        <div class="hero-card-1">
+            <h1 data-aos="fade-up">KHILGAON</h1>
+            <h2 class="Adress" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">22/1 TALTOLA-KHAILGAON,<br>DHAKA,BANGLADESH</h2>
+            <h3 data-aos="fade-left" data-aos-anchor-placement="bottom-bottom"> OPEN EBERYDAY</h3>
+            <h4 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">12.00PM-11.00PM</h4>
+            <button class="Direction-1" data-aos="flip-up">GET-DIRECTIONS</button>
+        </div>
+        <div class="hero-image">
+            <img src="/resturant/images/location-1.jpg" alt="location">
+        </div>
     </div>
-
-    <!-- Fries -->
-    <div class="logo-item">
-      <img src="/resturant/images/fries_logo.png" alt="Fries" class="w-20 h-20 rounded-full shadow-md">
-      <p>Fries</p>
+    <!-- Second Row -->
+    <div class="hero-row-2">
+        <div class="hero-image">
+            <img src="/resturant/images/location-2.jpg" alt="location">
+        </div>
+        <div class="hero-card-2">
+            <h1 data-aos="fade-up">BANASREE</h1>
+            <h2 class="Adress" data-aos="fade-left" data-aos-anchor-placement="bottom-bottom">22/1
+                SOUTH-BANASREE,<br>DHAKA,BANGLADESH</h2>
+            <h3 data-aos="fade-right" data-aos-anchor-placement="bottom-bottom"> OPEN EBERYDAY</h3>
+            <h4 data-aos="fade-left" data-aos-anchor-placement="bottom-bottom">12.00PM-11.00PM</h4>
+            <button class="Direction-2" data-aos="flip-up">GET-DIRECTIONS</button>
+        </div>
     </div>
-
-    <!-- Sandwich -->
-    <div class="logo-item">
-      <img src="/resturant/images/sandwich-logo.png" alt="Sandwich" class="w-20 h-20 rounded-full shadow-md">
-      <p>Sandwich</p>
-    </div>
-
-    <!-- Drink -->
-    <div class="logo-item">
-      <img src="/resturant/images/drinks-logo.png" alt="Drink" class="w-20 h-20 rounded-full shadow-md">
-      <p>Drink</p>
-    </div>
-
-    <!-- Salad -->
-    <div class="logo-item">
-      <img src="/resturant/images/salad-logo.png" alt="Salad" class="w-20 h-20 rounded-full shadow-md">
-      <p>Salad</p>
-    </div>
-
-    <!-- Dessert -->
-    <div class="logo-item">
-      <img src="/resturant/images/desserts.png" alt="Dessert" class="w-20 h-20 rounded-full shadow-md">
-      <p>Dessert</p>
-    </div>
-  </div>
 </section>
-<section class="menu-section">
-  <div class="menu-container ">
-    <div class="flex flex-row justify-between py-0 sm:py-10">
-      <!-- Section title -->
-      <h2 class="hidden sm:block">Showing <span id="menu-count"></span> items</h2>
 
-      <!-- Sorting buttons -->
-      <div class="sort-buttons flex items-center">
-        <label for="sort" class="mr-3 font-semibold text-gray-700 text-lg">Sort by:</label>
-        <select id="sort" onchange="handleSort(event)">
-          <option value="" class="text-gray-700">Select option</option>
-          <option value="name" class="text-gray-700">Name (A-Z)</option>
-          <option value="price" class="text-gray-700">Price (Low to High)</option>
-          <option value="popularity" class="text-gray-700">Most Popular</option>
-        </select>
-      </div>
+<section class="burgers-section">
+    <div class="burger-container">
+        <div class="burger-bottom" data-aos-anchor-placement="bottom-bottom">
+            <div class="burger-img" data-aos="flip-up" data-aos-duration="800" data-aos-delay="0">
+                <img src="/resturant/images/burger-plate.jpg" alt="Burger Plate">
+            </div>
+            <div class="burger-cards">
+                <div class="card" data-aos="flip-up" data-aos-duration="800" data-aos-delay="200">
+                    <h4><span>OUR <br></span>MENUS</h4>
+                    <p>Discover a wide variety of freshly prepared burgers, sides, and drinks designed to satisfy every
+                        craving.
+                        From our signature classics to seasonal specials, each dish is made with the freshest
+                        ingredients
+                        and a passion for flavor. Whether you’re dining in or taking away, our menu has something for
+                        everyone.
+                    </p>
+                    <button class="btn-orange" onclick="window.location.href='#menu'">VIEW MENUS</button>
+                </div>
+                <div class="card" data-aos="flip-up" data-aos-duration="800" data-aos-delay="300">
+                    <h4><span>ORDER <br></span>DELIVERY</h4>
+                    <p> Enjoy your favorite burgers without leaving home! Our fast and reliable delivery service brings
+                        the taste you love straight to your door. Choose from our full menu, customize your order,
+                        and track your delivery in real time for the ultimate convenience.</p>
+                    <button class="btn-black" onclick="window.location.href='Order_Online.html'">ORDER ONLINE</button>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Menu items container -->
-    <div class="category">
-      <div class="category-container">
-        <!-- Items will be inserted here dynamically via JS -->
-      </div>
-
-    </div>
-  </div>
 </section>
          <!-- Subscribe Section -->
     <section class="subscribe-section">
